@@ -23,6 +23,9 @@ app.get('/music', (req,res) =>{
     res.sendFile(path.join(__dirname, 'views/music.html'))
 })
 
+app.get('/*', (req,res) =>{
+    res.sendFile(path.join(__dirname, 'views/404notfound.html'))
+})
 
 app.listen(PORT, ()=>{
     console.log(`Server running in http://localhost:${PORT}`);
